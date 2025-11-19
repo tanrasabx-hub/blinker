@@ -257,6 +257,7 @@ def test_strong_receiver() -> None:
     assert [id(fn) for fn in sig.receivers.values()] == [fn_id]
 
 
+@pytest.mark.asyncio
 async def test_async_receiver() -> None:
     sentinel = []
 
