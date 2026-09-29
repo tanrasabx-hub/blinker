@@ -42,6 +42,9 @@ def make_id(obj: object) -> t.Hashable:
     if inspect.ismethod(obj):
         return id(obj.__func__), id(obj.__self__)
 
+    if isinstance(obj, int):
+        return obj
+
     return id(obj)
 
 
